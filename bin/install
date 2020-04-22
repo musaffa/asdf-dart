@@ -68,20 +68,20 @@ install_dart () {
     fi
 
     # install the sdk
-    URL="https://storage.googleapis.com/dart-archive/channels/stable/release/${version}/sdk/dartsdk-${platform}-${arch}-release.zip"
+    URL="https://storage.flutter-io.cn/dart-archive/channels/stable/release/${version}/sdk/dartsdk-${platform}-${arch}-release.zip"
     echo "Installing Dart SDK..."
     echo $URL
     curl $URL -o "${tempdir}/sdk.zip"
 
     if [ $allow_extras -eq "1" ]; then
         # install content_shell
-        URL="https://storage.googleapis.com/dart-archive/channels/stable/release/${version}/dartium/content_shell-${platform}-${arch}-release.zip"
+        URL="https://storage.flutter-io.cn/dart-archive/channels/stable/release/${version}/dartium/content_shell-${platform}-${arch}-release.zip"
         echo "Installing Content Shell..."
         echo $URL
         curl $URL -o "${tempdir}/content_shell.zip"
 
         # install dartium
-        URL="https://storage.googleapis.com/dart-archive/channels/stable/release/${version}/dartium/dartium-${platform}-${arch}-release.zip"
+        URL="https://storage.flutter-io.cn/dart-archive/channels/stable/release/${version}/dartium/dartium-${platform}-${arch}-release.zip"
         echo "Installing Dartium..."
         echo $URL
         curl $URL -o "${tempdir}/dartium.zip"
